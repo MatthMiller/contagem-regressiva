@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contagem Regressiva</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
+  </style>
+
+  <h1 class="title">⏳️ Contagem Regressiva</h1>
+
+  <section class="unidade-tempo-container">
+    <div class="unidade-tempo">
+      <p data-unidadeDeTempo="dias">00</p>
+      <p class="legenda-unidade-tempo">dias</p>
+    </div>
+    <span class="dois-pontos-separador">:</span>
+    <div class="unidade-tempo">
+      <p data-unidadeDeTempo="horas">00</p>
+      <p class="legenda-unidade-tempo">horas</p>
+    </div>
+    <span class="dois-pontos-separador">:</span>
+    <div class="unidade-tempo">
+      <p data-unidadeDeTempo="minutos">00</p>
+      <p class="legenda-unidade-tempo">minutos</p>
+    </div>
+    <span class="dois-pontos-separador">:</span>
+    <div class="unidade-tempo">
+      <p data-unidadeDeTempo="segundos">00</p>
+      <p class="legenda-unidade-tempo">segundos</p>
+    </div>
+  </section>
+
+  <div class="inputs-container">
+    <form class="inputs">
+      <label for="dia">Insira a data (números):</label>
+      <div>
+        <input type="number" name="dia" id="dia" placeholder="Dia">
+      </div>
+      <div>
+        <input type="number" name="mes" id="mes" placeholder="Mês">
+      </div>
+      <div>
+        <input type="number" name="ano" id="ano" placeholder="Ano">
+      </div>
+      <span class="mensagem-erro">Apenas datas futuras e válidas são permitidas.</span>
+      <button data-iniciar-contagem>Iniciar Contagem</button>
+    </form>
+  </div>
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+body {
+  background-color: #010101;
+  color: #f0f0f0;
+  margin: 0;
+  position: relative;
+  top: 200px;
+}
+
+h1,
+h2,
+h3,
+span,
+a,
+p {
+  margin: 0;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remover setinhas do input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  display: block;
+}
+
+.title {
+  font-weight: 400;
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.unidade-tempo-container {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  flex-wrap: wrap;
+}
+
+.unidade-tempo {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+[data-unidadeDeTempo] {
+  font-size: 2rem;
+}
+
+.legenda-unidade-tempo {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #808080;
+}
+
+.dois-pontos-separador {
+  font-size: 1.5rem;
+  font-weight: 500;
+  /* color: #808080; */
+}
+
+.inputs-container {
+  background-color: #121212;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.inputs {
+  padding: 25px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  column-gap: 5px;
+  margin-top: 40px;
+  font-family: 'Roboto Slab', serif;
+  box-sizing: border-box;
+}
+
+.inputs label {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  grid-column: 1/-1;
+}
+
+.inputs input[type="number"] {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 7px;
+  display: block;
+  border: 2px solid #121212;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 8px 12px 8px 12px;
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  color: #f0f0f0;
+  font-family: 'Roboto Slab', serif;
+}
+
+.mensagem-erro {
+  display: none;
+  margin-top: 7px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #dc143c;
+  grid-column: 1/-1;
+}
+
+.mensagem-erro.ativo {
+  display: block;
+}
+
+[data-iniciar-contagem] {
+  margin-top: 15px;
+  background: none;
+  border: none;
+  font-weight: 500;
+  color: #302007;
+  font-family: 'Roboto Slab', serif;
+  padding: 10px 12px;
+  border-radius: 4px;
+  background-color: #F1A426;
+  letter-spacing: 1px;
+  font-size: 1rem;
+
+  width: max-content;
+  justify-self: end;
+  grid-column: 1/-1;
+}
+
+[data-iniciar-contagem]:hover {
+  cursor: pointer;
+}
+
+@media (pointer:fine) {
+  [data-iniciar-contagem] {
+    transition: 150ms;
+  }
+
+  [data-iniciar-contagem]:hover {
+    background-color: #a8721a;
+  }
+}
+
+body {
+  position: initial;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.75rem;
+    line-height: 2.35rem;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .unidade-tempo {
+    font-size: 0.8rem;
+  }
+  
+  [data-unidadeDeTempo] {
+    font-size: 1.8rem;
+  }
+  
+  .legenda-unidade-tempo {
+    font-size: 0.8rem;
+  }
+  
+  .dois-pontos-separador {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 452px) {
+  .inputs-container {
+    border-radius: 0px;
+  }
+
+  .inputs {
+    padding: 20px 20px;
+  }
+}
