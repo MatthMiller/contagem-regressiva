@@ -170,12 +170,12 @@ body {
     line-height: 2.35rem;
   }
 
-  .unidade-tempo {
-    font-size: 0.8rem;
-  }
-
   .unidade-tempo-container {
     gap: 15px;
+  }
+  
+  .unidade-tempo {
+    font-size: 0.8rem;
   }
 
   .inputs {
