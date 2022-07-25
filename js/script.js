@@ -1,4 +1,5 @@
 import ContagemRegressiva from './contagem-regressiva.js';
+import MobileZoomBlock from './mobile-label-zoom-block.js';
 
 const contagem = new ContagemRegressiva(
     '#ano',
@@ -8,3 +9,4 @@ const contagem = new ContagemRegressiva(
     '[data-iniciar-contagem]',
     '.mensagem-erro'
 );
+const mobileZoomBlock = new MobileZoomBlock();
