@@ -16,7 +16,7 @@ export default class ContagemRegressiva {
         const inputs = [this.inputDia, this.inputMes, this.inputAno];
 
         inputs.forEach((elemento) => {
-            if(elemento.value) {
+            if (elemento.value) {
                 if(!elemento.value[1]) {
                     elemento.value = `0${elemento.value}`;
                 }
