@@ -8,4 +8,3 @@ const contagem = new ContagemRegressiva(
     '[data-iniciar-contagem]',
     '.mensagem-erro'
 );
-console.log(contagem);

@@ -24,16 +24,14 @@ export default class ContagemRegressiva {
         });
 
         const valoresFormatados = [...inputs].map((elementoInput) => {
-            return {
-                [elementoInput.id]: elementoInput.value.replace(/[^0-9\.]+/g, ''),
-            }
+            return elementoInput.value.replace(/[^0-9\.]+/g, '');
         });
 
         this.criarDateFuturo(valoresFormatados);
     }
 
     criarDateFuturo(valores) {
-        const [ dia, mes, ano ] = [ valores[0].dia, valores[1].mes, valores[2].ano ];
+        const [ dia, mes, ano ] = [ valores[0], valores[1], valores[2] ];
         const dataConcatenada = `${ano}-${mes}-${dia}T00:00:00`;
 
         this.dateFuturo = new Date(dataConcatenada);

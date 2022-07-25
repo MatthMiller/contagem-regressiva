@@ -2,8 +2,6 @@ body {
   background-color: #010101;
   color: #f0f0f0;
   margin: 0;
-  position: relative;
-  top: 200px;
 }
 
 h1,
@@ -82,6 +80,7 @@ input[type=number] {
   border-radius: 4px;
   max-width: 450px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .inputs {
@@ -161,10 +160,6 @@ input[type=number] {
 }
 
 @media (max-width: 500px) {
-  body {
-    position: initial;
-  }
-
   .title {
     font-size: 1.7rem;
     line-height: 2.35rem;
@@ -178,9 +173,9 @@ input[type=number] {
     font-size: 0.8rem;
   }
 
-  .inputs {
+  /* .inputs {
     grid-template-columns: 1fr;
-  }
+  } */
 
   [data-unidadeDeTempo] {
     font-size: 1.8rem;
