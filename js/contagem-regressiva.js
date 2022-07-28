@@ -17,7 +17,7 @@ export default class ContagemRegressiva {
 
         inputs.forEach((elemento) => {
             if (elemento.value) {
-                if(!elemento.value[1]) {
+                if (!elemento.value[1]) {
                     elemento.value = `0${elemento.value}`;
                 }
             }
@@ -32,7 +32,8 @@ export default class ContagemRegressiva {
 
     criarDateFuturo(valores) {
         const [ dia, mes, ano ] = [ valores[0], valores[1], valores[2] ];
-        const dataConcatenada = `${ano}-${mes}-${dia}T00:00:00`;
+        // const dataConcatenada = `${ano}-${mes}-${dia}T00:00:00`;
+        const dataConcatenada = `2022-07-28T12:28:00`;
 
         this.dateFuturo = new Date(dataConcatenada);
         if (this.dateFuturo == 'Invalid Date') {
@@ -62,6 +63,8 @@ export default class ContagemRegressiva {
             this.zeroAtrasParser(this.minutosRestantes()),
             this.zeroAtrasParser(this.segundosRestantes())
         ];
+
+        this.verificacaoResetarLoop();
     }
 
     inserirTempoRestante() {
@@ -75,6 +78,24 @@ export default class ContagemRegressiva {
             this.atualizaTempoRestante();
             this.inserirTempoRestante();
         }, 1000);
+    }
+
+    verificacaoResetarLoop() {
+        const timerZerado = ['00', '00', '00', '00'];
+        let counterMatches = 0;
+        this.dadosAtualizados.forEach((dado, indexDado) => {
+            if (dado === timerZerado[indexDado]) {
+                counterMatches++;
+            }
+        });
+
+        if (counterMatches === 4) {
+            this.resetarLoop();
+        }
+    }
+
+    resetarLoop() {
+        clearInterval(this.loopAtualizacao);
     }
 
     diasRestantes() {
